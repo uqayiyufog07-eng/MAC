@@ -1,0 +1,110 @@
+macOS Liquid Web Simulator
+
+一个基于 React 和 Tailwind CSS 构建的高完成度 macOS 操作系统网页模拟器。该项目专注于还原 macOS 的“液态玻璃”视觉质感、复杂的物理动效以及深度应用交互体验。
+
+🚀 核心功能
+
+1. 桌面交互系统
+
+液态动画引擎：窗口开启、最小化（吸入 Dock 栏）及还原均具有真实的物理反馈感。
+
+Dock 栏：支持悬停缩放反馈、应用开启状态指示及右键快捷菜单。
+
+Spotlight (Cmd + K)：支持快速应用搜索及即时数学运算。
+
+智能锁屏：包含实时时钟显示、用户验证及毛玻璃背景切换。
+
+2. 内置应用生态
+
+🧭 Safari 浏览器：支持多标签页切换、浏览历史前进/后退及地址栏显示。
+
+📂 Finder (访达)：模拟文件系统导航，支持 Desktop, Downloads, Applications 等侧边栏联动。
+
+💬 Messages (信息)：全功能聊天界面模拟，包含联系人列表和气泡对话。
+
+💻 VS Code：带有文件树导航和语法高亮风格的代码查看器。
+
+🎵 Music (音乐)：沉浸式播放器，带有封面缩放效果及动态进度条。
+
+⚙️ 系统设置：侧边栏式布局，支持切换深色/浅色模式、更换壁纸。
+
+⌨️ 终端 (Terminal)：支持 neofetch, ls, help, date 等命令输入。
+
+📸 其他应用：Photo Booth (快门特效)、全功能计算器、持久化便签。
+
+🛠️ 技术栈
+
+前端框架: React 18
+
+样式处理: Tailwind CSS (含磨砂玻璃效果、自定义关键帧动画)
+
+图标库: Lucide React
+
+动画控制: 原生 CSS Keyframes + React State 状态机
+
+📦 本地运行指南
+
+由于本项目是一个高度集成的单文件 React 组件，你可以非常容易地将其集成到任何 React 环境中。
+
+1. 环境要求
+
+Node.js (推荐 v16 或以上版本)
+
+npm 或 yarn
+
+2. 快速启动 (使用 Vite)
+
+我们推荐使用 Vite 来快速启动项目：
+
+# 创建一个新的 Vite React 项目
+npm create vite@latest macos-simulator -- --template react
+
+# 进入目录
+cd macos-simulator
+
+# 安装依赖
+npm install lucide-react
+
+# 将 macos_liquid_v10.jsx 的内容复制到 src/App.jsx 中
+# (确保你已经配置好 Tailwind CSS)
+
+# 启动开发服务器
+npm run dev
+
+
+
+3. 配置 Tailwind CSS
+
+确保你的项目已安装并配置了 Tailwind CSS。在 tailwind.config.js 中建议开启 JIT 模式以获得最佳性能。
+
+🌐 部署说明
+
+部署到 Vercel (推荐)
+
+Vercel 是部署 React 应用最简单的平台：
+
+将代码推送至你的 GitHub 仓库。
+
+登录 Vercel，点击 "Add New Project"。
+
+选择你的仓库，Vercel 会自动识别 Vite 配置。
+
+点击 "Deploy"，等待 1 分钟即可通过生成的 URL 访问。
+
+部署到 GitHub Pages
+
+在 package.json 中添加 "homepage": "https://<your-username>.github.io/<repo-name>"。
+
+安装部署工具：npm install gh-pages --save-dev。
+
+在 scripts 中添加：
+
+"predeploy": "npm run build"
+
+"deploy": "gh-pages -d dist"
+
+运行 npm run deploy。
+
+📄 许可证
+
+该项目采用 MIT 许可证。你可以自由地进行二次开发、修改或用于个人学习。
